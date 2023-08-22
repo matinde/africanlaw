@@ -1,0 +1,12 @@
+version: "3"
+services:
+  africanlaw:
+    
+    build: .
+    volumes:
+      - .:/africanlaw
+    ports:
+      - 5000:5000
+    image: africanlaw:django
+    container_name: africanlaw
+    command: python manage.py runserver 0.0.0.0:5000
